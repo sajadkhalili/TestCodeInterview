@@ -1,0 +1,70 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetVersion)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <Choose>
+    <!-- Condition: Check if SSF.EFCore.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.EFCore\SSF.EFCore.csproj')">
+
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.EFCore.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.EFCore\SSF.EFCore.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.EFCore.csproj doesn't exist -->
+    <Otherwise>
+      <ItemGroup>
+        <!-- Reference SSF.EFCore package with version 1.0.9 -->
+        <PackageReference Include="SSF.EFCore" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <Choose>
+    <!-- Condition: Check if SSF.Infrastructure.Abstractions.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.Infrastructure.Abstractions\SSF.Infrastructure.Abstractions.csproj')">
+
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.Infrastructure.Abstractions.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.Infrastructure.Abstractions\SSF.Infrastructure.Abstractions.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.Infrastructure.Abstractions.csproj doesn't exist -->
+    <Otherwise>
+      <ItemGroup>
+        <!-- Reference SSF.Infrastructure.Abstractions package with version 1.0.9 -->
+        <PackageReference Include="SSF.Infrastructure.Abstractions" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+
+
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+
+
+
+  </ItemGroup>
+
+
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01-Core\SSF.Surveys.Domain\SSF.Surveys.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

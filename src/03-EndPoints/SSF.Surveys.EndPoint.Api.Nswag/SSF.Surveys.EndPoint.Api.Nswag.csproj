@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetVersion)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+      
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NSwag.AspNetCore" />
+    <PackageReference Include="NSwag.CodeGeneration.CSharp" />
+    <!--<PackageReference Include="NSwag.MSBuild" />-->
+  </ItemGroup>
+
+  <ItemGroup>
+
+    <ProjectReference Include="..\SSF.Surveys.EndPoint.Api\SSF.Surveys.EndPoint.Api.csproj">
+      <Private>False</Private>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <SkipGetTargetFrameworkProperties>true</SkipGetTargetFrameworkProperties>
+    </ProjectReference>
+    
+  </ItemGroup>
+
+  <!--<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
+    <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net80) run \Generated\nswag.json  /variables:Configuration=$(Configuration)" />
+  </Target>-->
+
+  <!--<Target Name="NSwag" AfterTargets="PostBuildEvent" Condition=" '$(Configuration)' == 'Debug' ">
+    <Message Text="Working Directory: $(ProjectDir)" Importance="high" />
+    <Message Text="NSwag Executable: $(NSwagExe_Net80)" Importance="high" />
+    <Exec WorkingDirectory="$(ProjectDir)" EnvironmentVariables="ASPNETCORE_ENVIRONMENT=Development" Command="$(NSwagExe_Net80) run nswag.json /variables:Configuration=$(Configuration)" />
+  </Target>-->
+
+
+</Project>

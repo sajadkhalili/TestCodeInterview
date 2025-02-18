@@ -1,0 +1,102 @@
+{
+  "Home": "خانه SpecificationResource ",
+  "Save": "ذخیره",
+  "New": "جدید",
+  "Return": "بازگشت",
+  "Identity": "مدیریت کاربران",
+  "Users": "کاربران",
+  "User": "کاربر",
+  "User.UserName": "نام کاربری",
+
+  "Title": "عنوان",
+  "Name": "نام",
+  "Exception:{0} Can not Duplicate": "{0} تکراری میباشد",
+  "Validation:PersianMatch {0}": "حروف  {0} باید فارسی باشد."
+}
+
+//{
+//  "culture": "fa",
+//  "texts":{
+
+
+
+//    "Menu:FileManager": "مدیریت فایل",
+//    "Save": "ذخیره",
+//    "DropdownDefaultOption": " -- یک مورد را انتخاب کنید --",
+
+//    "Actions": "عملیات",
+//    "Create": "جدید",
+//    "Edit": "ویرایش",
+//    "Delete": "حذف",
+//    "Action.Delete.ConfirmMessage": "آیا حذف  {0} را تایید میکنید؟",
+//    "Action.Alert.Success": "عملیات با موفقیت انجام شد",
+
+
+//    "EntityName": "نام جداول",
+//    "Display:Title": "عنوان",
+//    "EntityName:Description": "",
+//    "EntityName.New": "نام جدول جدید",
+//    "EntityName.Edit": "ویرایش نام جدول",
+
+
+//    "Category": "دسته بندی ",
+//    "Category:Description": "",
+//    "Category.Edit": "ویرایش  دسته بندی",
+//    "Category.New": " دسته بندی جدید",
+
+//    "Category.FileTypeProvider.Add": "افزودن نوع فایل",
+//    "Display:BasePath": "ادرس",
+//    "Notification.NotFoundFileType": "تا کنون نوع فایلی برای این دسته بندی ایجاد نشده است ",
+//    "Display:InputExtentionId": "پسوند های مجاز ورودی",
+//    "Display:OutputExtentionId": "پسوند مجاز خروجی ",
+
+//    "FileType": "نوع فایل",
+//    "FileProviderTypeSetting": "ویژگی فایل های انتخابی",
+//    "FileProviderType": "Provider",
+//    "Mit.Store.FileManager.Category:SizeDetailsLimit": "حداقل یک اندازه باید مشخص گردد",
+//    "Mit.Store.FileManager.WhoCategory:FileGenerator": "اولین سایز باید توسط کاربر  بارگزاری شود",
+//    "Mit.Store.FileManager.WhoCategory:SizeFileInvalid": "اندازه ها نامعتیر میباشد",
+
+//    "Display:Property": "فیلد ",
+//    "Display:Tag": "تگ ",
+//    "Display:EntityNameId": "جدول ",
+//    "SizeDetails": "جزییات اندازه فایل",
+//    "Display:Size": "عنوان اندازه",
+//    "Display:Width": "عرض ",
+//    "Display:Height": "ارتفاع",
+//    "Display:Generator": "سازنده فایل ",
+//    "InternalImage.PublicSetting": "تنظیمات عمومی عکس داخلی",
+//    "InputExtention": "پسوند های مجاز ورودی",
+//    "OutputExtention": "پسوند مجاز خروجی ",
+//    "Display:Url": "آدرس پایه",
+//    "Display:Volume": "حداکثر حجم",
+//    "Upload.LoadFile": "بارگزاری فایل",
+//    "Upload.DeleteFile": "حذف فایل",
+//    "Upload.Description.Width": " عرض   : {0}",
+//    "Upload.Description.Height": " طول   : {0}",
+//    "Upload.Description.InputExtention": "پسوند های مجاز : {0}",
+//    "Upload.Description.Volume": " حداکثر حجم مجاز : {0}",
+//    "Display:EntityId": "شناسه",
+
+//    "Display:Keywords": "کلمه کلیدی",
+//    "Display:FileTypeId": "نوع فایل ",
+//    "Display:CategoryId": "دسته بندی",
+
+
+//    "NotEmptyFile": "فایل را مشخص کنید",
+//    "FileManager:InternalImageFullValidatin": "فایل همه اندازه ها را مشخص کنید",
+//    "FileManager:InternalFilmFullValidatin": "فایل مورد نظر را مشخص کنید",
+//    "FileManager:FileNullException": "فایل نمیتواند خالی باشد",
+//    "FileManager:DuplicateItemException": "مقدار {Item} تکراری میباشد",
+
+//    "FileManager:InvalidDomainDataException": "مقدار {0} صحیح نمیباشد",
+//    "FileManager:InvalidFileExtentionException": "پسوند فایل مورد نظر  مجاز نمیباشد ",
+//    "FileManager:InvalidFileVolumeException": "حجم فایل  مورد نظر  باید {Volume} باشد ",
+//    "FileManager:InvalidFileException": "فایل  مورد نظر  مجاز نمیباشد ",
+//    "FileManager:InvalidFileRatioException": "اندازه فایل باید {Width} * {Height} باشد ",
+
+//    "FileManager:NotExistAnyFilesException": "فایل  مورد نظر  مجاز نمیباشد ",
+//    "FileManager:NotAllowDeleteException": "امکان حذف وجود ندارد. ",
+//    "Exception:{0} Can not Duplicate": "Exception:{0} Can not Duplicate"
+//  }
+//}

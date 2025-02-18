@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetVersion)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+
+  <Choose>
+    <!-- Condition: Check if SSF.Core.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.Core\SSF.Core.csproj')">
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.Core.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.Core\SSF.Core.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.Core.csproj doesn't exist -->
+    <Otherwise>
+      <ItemGroup>
+        <!-- Reference SSF.Core package with version 1.0.9 -->
+        <PackageReference Include="SSF.Core" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+
+  <ItemGroup>
+    <Compile Remove="Answers\**" />
+    <Compile Remove="Questions\**" />
+    <Compile Remove="Subjects\**" />
+    <EmbeddedResource Remove="Answers\**" />
+    <EmbeddedResource Remove="Questions\**" />
+    <EmbeddedResource Remove="Subjects\**" />
+    <None Remove="Answers\**" />
+    <None Remove="Questions\**" />
+    <None Remove="Subjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SSF.Surveys.Domain.Shared\SSF.Surveys.Domain.Shared.csproj" />
+  </ItemGroup>
+
+</Project>

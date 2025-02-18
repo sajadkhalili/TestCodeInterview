@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(DotNetVersion)</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <Choose>
+    <!-- Condition: Check if SSF.Mediators.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.Mediators\SSF.Mediators.csproj')">
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.Mediators.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.Mediators\SSF.Mediators.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.Mediators.csproj doesn't exist -->
+    <Otherwise>
+
+      <ItemGroup>
+        <!-- Reference SSF.Mediators package with version 1.0.9 -->
+        <PackageReference Include="SSF.Mediators" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSF.Surveys.Domain.Shared\SSF.Surveys.Domain.Shared.csproj" />
+    <ProjectReference Include="..\SSF.Surveys.Domain\SSF.Surveys.Domain.csproj" />
+  </ItemGroup>
+  <Choose>
+    <!-- Condition: Check if SSF.Infrastructure.Abstractions.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.Infrastructure.Abstractions\SSF.Infrastructure.Abstractions.csproj')">
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.Infrastructure.Abstractions.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.Infrastructure.Abstractions\SSF.Infrastructure.Abstractions.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.Infrastructure.Abstractions.csproj doesn't exist -->
+    <Otherwise>
+
+      <ItemGroup>
+        <!-- Reference SSF.Infrastructure.Abstractions package with version 1.0.9 -->
+        <PackageReference Include="SSF.Infrastructure.Abstractions" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+  <Choose>
+    <!-- Condition: Check if SSF.Core.Utilities.csproj exists -->
+    <When Condition="Exists('$(FrameworkUrl)\src\SSF.Core.Utilities\SSF.Core.Utilities.csproj')">
+      <ItemGroup>
+        <!-- Use ProjectReference if SSF.Core.Utilities.csproj exists -->
+        <ProjectReference Include="$(FrameworkUrl)\src\SSF.Core.Utilities\SSF.Core.Utilities.csproj" />
+      </ItemGroup>
+    </When>
+    <!-- Otherwise: If SSF.Core.Utilities.csproj doesn't exist -->
+    <Otherwise>
+      <ItemGroup>
+        <!-- Reference SSF.Core.Utilities package with version 1.0.9 -->
+        <PackageReference Include="SSF.Core.Utilities" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+
+
+</Project>
